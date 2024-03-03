@@ -1,4 +1,8 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 body {
+  font-family: 'Pretendard';
+
   background: var(--color-black);
   color: #fff;
 }
@@ -28,8 +32,12 @@ body {
   position: relative;
   width: 148px;
   height: 148px;
-  background-color: var(--background-color-grape-purple);
+  background: conic-gradient(var(--color-grey3) 0 25%, var(--background-color-grape-purple) 0 75%);
   border-radius: var(--border-radius-round);
+}
+
+.group-member:hover > .group-member-hover {
+  display: unset;
 }
 
 .group-member-image {
@@ -40,4 +48,46 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.group-member-hover {
+  display: none;
+}
+
+.group-member-info {
+  text-align: center;
+
+  transform: translate(0%, 240%);
+}
+
+.group-member-nickname {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: -0.025em;
+  
+  margin: 0;
+}
+
+.group-member-persent {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: -0.025em;
+
+  margin: 0;
+}
+
+.group-member-layer {
+  width: 137px;
+  height: 137px;
+
+  border-radius: var(--border-radius-round);
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(rgba(19, 19, 19, 0.02), 75%, var(--color-grey2));
 }
