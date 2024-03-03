@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대시보드</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/dashboard.css">
+</head>
+<body>
+  <nav>
+    <span id="profile">
+        <img src="/public/assets/image/ellipse1.png" alt="">
+        <h2>dbwlseeeee</h2>
+        <img src="/public/assets/image/expand-icon.png" alt="">
+    </span>
+  </nav>
+  <div class="web-title">
+    <div class="web-title1">
+        <h1>PODO-R </h1>
+        <img src="/public/assets/image/ellipse1.png">
+        <img src="/public/assets/image/ellipse2.png">
+        <img src="/public/assets/image/ellipse3.png">
+    </div>
+    <h1>나의 루틴, 나의 포도-알 </h1>
+  </div>
+  <div class="group-search-container">
+    <img src="/public/assets/image/flag-icon.png" alt="">
+    <input type="text" id="groupSearchInput" placeholder="어느 그룹에 참여하고 싶나요?">
+    <button id ="groupSearchBtn" onclick="groupSearch()">검색하기</button>
+    <button id ="createRoutineBtn" onclick="createRoutine()">루틴 생성하기</button>
+  </div>
+  <div class="main-content">
+    <div class="my-week-routine">
+        <div class="my-week-routine-content">
+            <h2>이번 주 나의 루틴</h2>
+            <h3>나는 얼마나 많은 포도를 재배했을까?</h3>
+            <ul class="routine-result-container">
+                <li class="completed-routine-wrapper">
+                    <p>달성한 루틴의 수</p>
+                    <span class="completed-num">+10</span> / <span class="all-num">37</span>
+                </li>
+                <li class="uncompleted-routine-wrapper">
+                    <p>달성 못한 루틴의 수</p>
+                    <span class="uncompleted-num">-5</span> / <span class="all-num">37</span>
+                </li>
+                <li class="completed-grapes-wrapper">
+                    <p>내가 재배한 포도송이</p>
+                    <span class="grapes-num">1</span>
+                </li>
+            </ul>
+            <div class="today-routine-and-calendar">
+                <div class="today-routine">
+                    <h4>오늘의 루틴</h4>
+                    <span class="today-date">2014.02.21.수요일</span>
+                    <ul class="today-routine-container">
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                        <li class="today-routine-wrapper">
+                            <img src ="/public/assets/image/check-icon-color.png">
+                            <p>매일 일기 쓰기</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-detail-btn-container">
+                    <span>더보기</span>
+                    <button class="mobile-detail-btn"></button>
+                </div>
+                <div class="calendar-routine">
+                    <table id="calendarRoutineTable">
+                        <thead>
+                            <tr>
+                                <th>일</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse2.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse2.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse2.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse3.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse2.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse2.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse2.png" alt=""></td>
+                                <td><img src="/public/assets/image/ellipse4.png" alt=""></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="detail-btn-container">
+            <button class="detail-btn"></button>
+        </div>
+    </div>
+    <div class="mobile-routine-btn-container">
+        <button id="mobileCreateRoutineBtn" onclick="createRoutine()">루틴 생성하기</button>
+        <span>나에게 꼭 맞는 루틴을 만들어 보세요!</span>
+    </div>
+    <div class="routine-ranking">
+        <h2>오늘의 루틴 순위</h2>
+        <h3>다른 사람들은 어떤 루틴을 지키고 있을까?</h3>
+        <div class="routine-ranking-container">
+            <div class="routine-ranking-wrapper">
+                <div class="ranking-title">
+                    <span class="ranking">1</span>
+                    <p class="routine-title">하루에 물 1리터 마시기</p>
+                    <button class="detail-routine-btn"></button>
+                </div>
+                <div class="routine-progress-bar">
+                    <div class="progress-bar-inner"></div>
+                    <span class="data">60%</span>
+                </div>
+                <div class="routine-participants">
+                    <img src="/public/assets/image/face-icon.png">
+                    <span class="participants-num">1243명</span><span class="participants-text">이 참여 중이에요!</span>
+                </div>
+            </div>
+            
+            <div class="routine-ranking-wrapper">
+                <div class="ranking-title">
+                    <span class="ranking">1</span>
+                    <p class="routine-title">하루에 물 1리터 마시기</p>
+                    <button class="detail-routine-btn"></button>
+                </div>
+                <div class="routine-progress-bar">
+                    <div class="progress-bar-inner"></div>
+                    <span class="data">60%</span>
+                </div>
+                <div class="routine-participants">
+                    <img src="/public/assets/image/face-icon.png">
+                    <span class="participants-num">1243명</span><span class="participants-text">이 참여 중이에요!</span>
+                </div>
+            </div>
+            <div class="routine-ranking-wrapper">
+                <div class="ranking-title">
+                    <span class="ranking">1</span>
+                    <p class="routine-title">하루에 물 1리터 마시기</p>
+                    <button class="detail-routine-btn"></button>
+                </div>
+                <div class="routine-progress-bar">
+                    <div class="progress-bar-inner"></div>
+                    <span class="data">60%</span>
+                </div>
+                <div class="routine-participants">
+                    <img src="/public/assets/image/face-icon.png">
+                    <span class="participants-num">1243명</span><span class="participants-text">이 참여 중이에요!</span>
+                </div>
+            </div>
+            <div class="routine-ranking-wrapper">
+                <div class="ranking-title">
+                    <span class="ranking">1</span>
+                    <p class="routine-title">하루에 물 1리터 마시기</p>
+                    <button class="detail-routine-btn"></button>
+                </div>
+                <div class="routine-progress-bar">
+                    <div class="progress-bar-inner"></div>
+                    <span class="data">60%</span>
+                </div>
+                <div class="routine-participants">
+                    <img src="/public/assets/image/face-icon.png">
+                    <span class="participants-num">1243명</span><span class="participants-text">이 참여 중이에요!</span>
+                </div>
+            </div>
+            <div class="routine-ranking-wrapper">
+                <div class="ranking-title">
+                    <span class="ranking">1</span>
+                    <p class="routine-title">하루에 물 1리터 마시기</p>
+                    <button class="detail-routine-btn"></button>
+                </div>
+                <div class="routine-progress-bar">
+                    <div class="progress-bar-inner"></div>
+                    <span class="data">60%</span>
+                </div>
+                <div class="routine-participants">
+                    <img src="/public/assets/image/face-icon.png">
+                    <span class="participants-num">1243명</span><span class="participants-text">이 참여 중이에요!</span>
+                </div>
+            </div>
+            <div class="routine-ranking-wrapper">
+                <div class="ranking-title">
+                    <span class="ranking">1</span>
+                    <p class="routine-title">하루에 물 1리터 마시기</p>
+                    <button class="detail-routine-btn"></button>
+                </div>
+                <div class="routine-progress-bar">
+                    <div class="progress-bar-inner"></div>
+                    <span class="data">60%</span>
+                </div>
+                <div class="routine-participants">
+                    <img src="/public/assets/image/face-icon.png">
+                    <span class="participants-num">1243명</span><span class="participants-text">이 참여 중이에요!</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="my-all-routine-container">
+        <!-- 윤정이 여기-->
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+  <script src="/public/js/util/dashboard.js"></script>
+</body>
+</html>

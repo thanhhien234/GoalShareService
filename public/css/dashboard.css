@@ -1,0 +1,458 @@
+body {
+    background: var(--color-black);
+    color: #fff;
+    padding: 4vh 3vh;
+}
+/*profile */
+#profile {
+    width: 200px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #191919;
+}
+  
+#profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+  
+#profile h2 {
+    margin: 0;
+    flex-grow: 1;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+  
+#profile img.expand-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* web-title*/
+.web-title1{
+    display: flex;
+    align-items: center;
+}
+.web-title1 img{
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+}
+.web-title h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+  
+/* group-search-container */
+.group-search-container {
+    background-color: #191919;
+    width: 50%;
+    padding: 5px 10px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.group-search-container img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #2A2A2A;
+    padding: 10px
+}
+#groupSearchInput{
+    flex: 1;
+    background-color: transparent;
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+.group-search-container button {
+    padding: 19px 16px 19px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#groupSearchBtn {
+    background-color: transparent;
+    border: 1px solid #404040;
+    color: #fff;
+}
+#groupSearchInput::placeholder {
+    color: #fff;
+}
+#createRoutineBtn {
+    background-color: var(--background-color-grape-magenta);
+    color: #000;
+}
+/*main-content*/
+.main-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+}
+/* my-week-routine */
+.my-week-routine {
+    width: 50%;
+}
+.my-week-routine-content{
+    background-color: #191919;
+    padding: 30px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 0;
+}
+.routine-ranking h2,
+.my-week-routine-content h2{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.routine-ranking h3,
+.my-week-routine-content h3{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0;
+}
+.routine-result-container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    list-style: none;
+    gap: 2vh;
+    padding: 0;
+}
+.routine-result-container p {
+    font-size: 12px;
+    color: #797979;
+}
+.routine-result-container .grapes-num{
+    font-size: 24px;
+    color: var(--background-color-grape-magenta);
+}
+.completed-num, .uncompleted-num {
+    font-size: 24px;
+    color: #fff;
+}
+.all-num {
+    font-size: 14px;
+    color: #797979;
+}
+/*today-routine*/
+.today-routine-and-calendar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.today-routine {
+    flex: 1
+}
+.today-routine h4{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.today-routine .today-date {
+    margin-top: 0;
+    font-size: 14px;
+    color: #797979;
+}
+.today-routine-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 5px;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+.today-routine-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.today-routine-wrapper {
+    background-color: #2A2A2A;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+}
+.today-routine-wrapper img {
+    width: 20px;
+    height: 20px;
+}
+.today-routine-wrapper p {
+    color: #797979;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.detail-btn-container{
+    background-color: #191919;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.detail-btn-container:hover {
+    background-color: #3D384B;
+}
+.detail-btn {
+    background-image: url("/public/assets/image/down-arrow.png");
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+/*calendar-routine */
+.calendar-routine {
+    flex: 1;
+    margin-left: 5vh;
+}
+#calendarRoutineTable {
+    width: 100%;
+}
+#calendarRoutineTable th {
+    font-size: 14px;
+    color: #797979;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+#calendarRoutineTable img{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+/* routine-ranking */
+.routine-ranking {
+    background-color: #191919;
+    width: 25%;
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+.routine-ranking-container {
+    overflow-y: scroll;
+    max-height: 500px; 
+}
+.routine-ranking-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.routine-ranking-wrapper {
+    padding: 20px 0;
+}
+.ranking-title {
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+}
+.ranking {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.detail-routine-btn {
+    background-image: url("/public/assets/image/vector-arrow.png");
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent
+}
+.detail-routine-btn:hover {
+    background-image: url("/public/assets/image/vector-arrow-white.png");
+}
+.routine-progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #2A2A2A;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar-inner {
+    width: 60%;
+    height: 100%;
+    background-color: #C77DFF;
+}
+.routine-participants {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+.routine-participants img {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+}
+.participants-num {
+    color: #C77DFF;
+    font-size: 12px;
+}
+
+.participants-text {
+    color: #797979;
+    font-size: 12px;
+}
+
+
+/* my-all-routine-container */
+.my-all-routine-container {
+    background-color: #191919;
+    width: 25%;
+    padding: 30px 20px;
+    border-radius: 20px;
+} /*윤정이 여기*/
+
+
+/* mobile screen */
+.mobile-detail-btn-container {
+    display: none
+}
+.mobile-detail-btn-container span {
+    font-size: 14px;
+}
+.mobile-detail-btn {
+    background-image: url("/public/assets/image/bottom-right-arrow.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+.mobile-routine-btn-container {
+    display: none;
+}
+#mobileCreateRoutineBtn{
+    background-color: var(--background-color-grape-magenta);
+    color: #000;
+    padding: 19px 16px 19px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+@media screen and (max-width: 900px) {
+    body {
+        padding: 2vh 0;
+    }
+    .web-title h1 {
+        font-size: 32px;
+        margin-left: 3vh;
+    }
+    #profile{
+        margin-bottom: 30px;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .my-week-routine {
+        width: 100%;
+    }
+    .my-week-routine-content {
+        border-radius: 20px;
+        padding-bottom: 30px;
+        margin-bottom: 8vh;
+    }
+    .routine-result-container {
+        width: 100%;
+    }
+    .today-routine-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
+    }
+    .today-routine-and-calendar {
+        display: flex;
+        flex-direction: column;
+    }
+    .calendar-routine {
+        margin-left: 0;
+        margin-top: 5vh;
+    }
+    #calendarRoutineTable img{
+        width: 70%;
+    }
+    
+    .my-week-routine {
+        width: 100%;
+    }
+    .routine-ranking {
+        width: 100%;
+    }
+    .detail-btn-container {
+        display: none;
+    }
+    .mobile-detail-btn-container{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-top: 0;
+    }
+    .group-search-container {
+        width: 90%;
+        padding: 5px 5px;
+        align-self: center;
+        margin: 0 auto; 
+    }
+    .group-search-container #createRoutineBtn{
+        display: none;
+    }
+    .mobile-routine-btn-container{
+        display: block;
+        background-color: #191919;
+        padding: 5px 0;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto; 
+        width: 90%;
+        margin-top: 5px;
+        margin-bottom: 8vh;
+    }
+    .mobile-routine-btn-container span {
+        flex: 1;
+        color: #797979;
+        text-align: center;
+    }
+    .routine-ranking {
+        margin-bottom: 8vh;
+    }
+
+    /*윤정이 여기*/
+}
