@@ -3,6 +3,29 @@ body {
   color: #fff;
 }
 
+#profile {
+  width: 183px;
+  height: 56px;
+  border-radius: var(--border-radius-profile);
+  background-color: var(--color-grey3);
+  position: relative;
+  margin-top: 72px;
+  left: 1675px;
+}
+
+#user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius-round);
+  margin: 3px;
+}
+
+#user-id {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
 .search-content {
   display: flex;
   max-width: 1680px;
@@ -27,6 +50,7 @@ body {
 
 #routine-number {
   color: var(--color-grey4);
+  display: block;
 }
 
 .search-routine-container {
@@ -57,10 +81,11 @@ body {
   padding-top: 5%;
 }
 
-span {
-  display: inline-block;
-}
-
 .routine-participants {
   color: var(--background-color-grape-purple);
+  display: block;
+}
+
+.routine-name {
+  display: block;
 }
