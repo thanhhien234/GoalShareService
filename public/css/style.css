@@ -3,13 +3,13 @@
   --color-black: #000000;
   --color-grey1: #222222;
   --color-grey2: #191919;
-  --color-grey3: #2a2a2a;
+  --color-grey3: #2A2A2A;
   --color-grey4: #797979;
 
   /* Circular Graph Color */
   --background-color-grape-deepPurple: #240046;
-  --background-color-grape-purple: #9d4edd;
-  --background-color-grape-magenta: #c8b6ff;
+  --background-color-grape-purple: #9D4EDD;
+  --background-color-grape-magenta: #C8B6FF;
 
   /* Border Radius */
   --border-radius-round: 50%;
@@ -22,8 +22,7 @@
   --border-radius-profile: 40px;
 }
 
-html,
-body {
+html, body {
   margin: 0;
 }
 
