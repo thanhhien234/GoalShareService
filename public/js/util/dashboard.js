@@ -16,3 +16,17 @@ $(document).ready(function() {
     });
 });
 
+
+// 더보기 버튼
+const detailBtn = document.querySelector('.detail-btn-container');
+const mobileDetailBtnContainer = document.querySelector('.mobile-detail-btn-container');
+const routineContainer = document.querySelector('.today-routine-container');
+
+detailBtn.addEventListener('click', function() {
+    routineContainer.classList.toggle('show-details');
+});
+mobileDetailBtnContainer.addEventListener('click', function() {
+    detailBtn.click();
+});
+
+
