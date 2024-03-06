@@ -249,6 +249,13 @@ body {
 .calendar-routine {
     flex: 1;
     margin-left: 5vh;
+    margin-bottom: 30px;
+    max-height: 350px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.calendar-routine.show-details {
+    max-height: none;
 }
 #calendarRoutineTable {
     width: 100%;
