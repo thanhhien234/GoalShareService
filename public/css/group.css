@@ -91,3 +91,46 @@ body {
 
   background: linear-gradient(rgba(19, 19, 19, 0.02), 75%, var(--color-grey2));
 }
+
+@media screen and (max-width: 390px){
+  .group-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .group-member-container {
+    width: 342px;
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+  }
+
+  .group-member {
+    width: 112px;
+    height: 112px;
+  }
+  
+  .group-member-image {
+    width: 104px;
+    height: 104px;
+  }
+
+  .group-member-info {
+    transform: translate(0%, 200%);
+  }
+  
+  .group-member-nickname {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .group-member-persent {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .group-member-layer {
+    width: 104px;
+    height: 104px;
+  }
+}
