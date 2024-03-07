@@ -4,37 +4,7 @@ body {
     padding: 4vh 3vh;
 }
 /*profile */
-#profile {
-    width: 200px;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    border-radius: 40px;
-    padding: 10px;
-    background-color: #191919;
-}
-  
-#profile img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-  
-#profile h2 {
-    margin: 0;
-    flex-grow: 1;
-    font-size: 16px;
-    color: #fff;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-weight: normal;
-}
-  
-#profile img.expand-icon {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
+/*민주가 여기*/
 
 /* web-title*/
 .web-title1{
@@ -304,6 +274,7 @@ body {
     width: 25%;
     padding: 30px 20px;
     border-radius: 20px;
+    max-height: 610px; 
 }
 .routine-ranking-container {
     overflow-y: scroll;
@@ -424,9 +395,6 @@ body {
     .web-title h1 {
         font-size: 32px;
         margin-left: 3vh;
-    }
-    #profile{
-        margin-bottom: 30px;
     }
     .main-content {
         display: flex;
