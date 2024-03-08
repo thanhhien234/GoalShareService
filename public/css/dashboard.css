@@ -351,12 +351,145 @@ body {
 
 /* my-all-routine-container */
 .my-all-routine-container {
-    background-color: #191919;
+    background: var(--color-grey2);
     width: 25%;
+    height: fit-content;
     padding: 30px 20px;
-    border-radius: 20px;
-} /*윤정이 여기*/
+    padding-bottom: 0;
+    border-radius: var(--border-radius-box);
 
+    display: flex;
+    flex-direction: column;
+}
+
+.my-all-routine-wrapper {
+    margin-top: 40px;
+}
+
+.my-all-routine-text-wrapper {
+    margin: 10px 0;
+}
+
+.my-all-routine-text-wrapper h2 {
+    font-size: 18px;
+    /* font-size: 0.9375vw; */
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.my-routine-row {
+    display: grid;
+    justify-content: center;
+    gap: 5px;
+}
+
+.my-routine-row:nth-child(1) {
+    grid-template-columns: repeat(2, 32.7%);
+}
+
+.my-routine-row:nth-child(2) {
+    margin: 5px 0;
+    grid-template-columns: repeat(3, 32.7%);
+}
+
+.my-routine-row:nth-child(3) {
+    grid-template-columns: 32.7%;
+}
+
+.my-routine {
+    aspect-ratio: 1/1;
+    width: 100%;
+    
+    border-radius: var(--border-radius-round);
+    background: conic-gradient(from 270deg, #7B2CBF 0 18deg, #3a3241 0 180deg, var(--color-grey3) 0 360deg);
+}
+
+.my-routine-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 55%;
+}
+
+.my-routine-rate-container {
+    display: flex;
+    align-items: center;
+}
+
+.my-routine-rate-number {
+    font-size: 0.833vw;
+    font-weight: 400;
+    line-height: 1.04vw;
+    letter-spacing: -0.025em;
+    color: #7B2CBF;
+    margin: 0;
+    margin-right: 3px;
+}
+
+.my-routine-rate-persent {
+    font-size: 0.625vw;
+    font-weight: 400;
+    line-height: 1.04vw;
+    letter-spacing: -0.025em;
+    color: #7B2CBF;
+    margin: 0;
+}
+
+.my-routine-name {
+    font-size: 0.833vw;
+    font-weight: 300;
+    line-height: 1.04vw;
+    letter-spacing: -0.025em;
+    text-align: center;
+    width: 5vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    margin: 0;
+}
+
+.my-all-routine-arrow-container {
+    display: flex;
+    justify-content: end;
+}
+
+.my-all-routine-arrow-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 24%;
+    aspect-ratio: 1/1;
+    border-bottom-right-radius: var(--border-radius-box);
+    /* transform: translateY(-64%); */
+
+    position: relative;
+    right: -20px;
+}
+
+.my-all-routine-arrow-wrapper:hover {
+    background: linear-gradient(135deg, var(--color-grey2) 0 50%, #3D384B 50% 100%)
+}
+
+.my-all-routine-a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    margin: 0.52vw;
+}
+
+.my-all-routine-a:hover {
+    cursor: pointer;
+}
+
+.arrow {
+    width: 2.083vw;
+}
 
 /* mobile screen */
 .mobile-detail-btn-container {
@@ -477,5 +610,75 @@ body {
         margin-bottom: 8vh;
     }
 
-    /*윤정이 여기*/
+    .my-all-routine-container {
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 22px;
+    }
+    .my-all-routine-text-wrapper {
+        margin: 0;
+    }
+    .my-routine-row {
+        gap: 3px;
+    }
+    .my-routine-row:nth-child(1) {
+        grid-template-columns: repeat(2, 32%);
+    }
+    .my-routine-row:nth-child(2) {
+        margin: 3px 0;
+        grid-template-columns: repeat(3, 32%);
+    }
+    .my-routine-row:nth-child(3) {
+        grid-template-columns: 32%;
+    }
+    .my-routine-rate-container {
+        top: 52%;
+    }
+    .my-routine-rate-number {
+        font-size: 2.564vw;
+        line-height: 4.1vw;
+    
+        margin: 0;
+    }
+    .my-routine-rate-persent {
+        font-size: 2.564vw;
+        line-height: 4.1vw;
+    }
+    .my-routine-name {
+        font-size: 3.07vw;
+        line-height: 4.1vw;
+    
+        width: 17.948vw;
+    
+        margin: 0;
+    }
+    .my-all-routine-arrow-wrapper {
+        aspect-ratio: 0;
+    
+        right: 0;
+    }
+    .my-all-routine-arrow-wrapper:hover {
+        background: none;
+    }
+    .my-all-routine-a {
+        justify-content: flex-end;
+    
+        margin: 0;
+    }
+    .my-all-routine-a:before {
+        content: "더보기";
+        
+        font-size: 3.589vw;
+        font-weight: 300;
+        line-height: 4.615vw;
+        letter-spacing: -0.025em;
+        color: #fff;
+    
+        white-space: nowrap;
+    
+        transform: translateX(20%);
+    }
+    .arrow {
+        width: 10.256vw;
+    }
 }
