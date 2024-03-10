@@ -14,6 +14,7 @@ class GroupUser extends Observer {
 
   set GroupUser(newGroupUser) {
     this.groupUser = newGroupUser;
+    this.render();
   }
 
   render() {
@@ -49,7 +50,7 @@ class GroupUser extends Observer {
       groupUserNickname.style.color = `${groupUserColor}`;
       groupUserPersent.style.color = `${groupUserColor}`;
 
-      groupMemberContainer.appendChild(groupMemberDiv);
+      this.groupMemberContainer.appendChild(groupMemberDiv);
     });
   }
 }
