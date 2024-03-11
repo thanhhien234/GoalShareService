@@ -313,6 +313,10 @@ body {
     position: relative;
     font-size: 1.1vw;
     font-weight: 400;
+}
+.routine-title {
+    margin-top: 1.4vw;
+    max-width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -348,9 +352,7 @@ body {
 }
 
 .progress-bar-inner {
-    width: 60%;
     height: 100%;
-    background-color: #C77DFF;
 }
 .routine-participants {
     display: flex;
@@ -363,7 +365,6 @@ body {
     margin-right: 3px;
 }
 .participants-num {
-    color: #C77DFF;
     font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -613,6 +614,9 @@ body {
     }
     .ranking-title{
         font-size: 16px;
+    }
+    .routine-title {
+        margin-top: 20px;
     }
     .ranking{
         font-size: 16px;
