@@ -14,7 +14,7 @@ class Routine extends Subject {
         authorization: "Bearer "+ getCookie("accessToken"),
       },
       success: (result) => {
-        this.myRoutine = result;
+        this.myRoutine = result.data;
       },
       error: (error) => {
         console.log("Error :", error);
@@ -25,7 +25,7 @@ class Routine extends Subject {
       url: config.serverUrl + "api/routine/rank",
       method: "GET",
       success: (result) => {
-        this.popularRoutine = result;
+        this.popularRoutine = result.data;
       },
       error: (error) => {
         console.log("Error :", error);
