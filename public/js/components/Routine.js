@@ -8,8 +8,11 @@ class Routine extends Subject {
 
   async update() {
     await $.ajax({
-      url: "https://king-seungkyu5.shop/api/routine/participate",
+      url: config.serverUrl + "api/routine/participate",
       method: "GET",
+      headers: {
+        authorization: "Bearer "+ getCookie("accessToken"),
+      },
       success: (result) => {
         this.myRoutine = result;
       },
@@ -19,7 +22,7 @@ class Routine extends Subject {
     });
 
     await $.ajax({
-      url: "https://king-seungkyu5.shop/api/routine/rank",
+      url: config.serverUrl + "api/routine/rank",
       method: "GET",
       success: (result) => {
         this.popularRoutine = result;
