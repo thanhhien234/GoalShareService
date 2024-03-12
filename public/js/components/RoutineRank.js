@@ -1,6 +1,7 @@
 class RoutineRank extends Observer {
-    constructor() {
+    constructor(subject) {
       super();
+      this.subject = subject;
       this.popularRoutine = [];
       this.colors = ['#C77DFF','#D9ED92','#C8B6FF','#5A189A','#DDE7C7','#7B2CBF', '#9747FF','#B5E48C','#E0AAFF','#5A189A']
     }
@@ -45,7 +46,7 @@ class RoutineRank extends Observer {
     });
   }
   notify(){
-    this.setPopularRoutine(routine.popularRoutine);
+    this.setPopularRoutine(this.subject.popularRoutine);
     this.render();
   }
 }
