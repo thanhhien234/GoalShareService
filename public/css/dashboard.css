@@ -12,29 +12,29 @@ body {
     align-items: center;
 }
 .icon1 {
-    width: 3vw;
-    height: 3vw;
+    width: 40px;
+    height: 40px;
     background-color: #C77DFF; 
     border-radius: 50%;
     margin-right: 3px;
 }
 .icon2 {
-    width: 3vw;
-    height: 3vw;
+    width: 40px;
+    height: 40px;
     background-color: #5A189A; 
     border-radius: 50%;
     margin-right: 3px;
 }
 .icon3 {
-    width: 3vw;
-    height: 3vw;
+    width: 40px;
+    height: 40px;
     background-color: #C8B6FF; 
     border-radius: 50%;
     margin-right: 3px;
 }
 
 .web-title h1 {
-    font-size: 3vw;
+    font-size: 48px;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 5px;
@@ -311,7 +311,7 @@ body {
 .ranking-title {
     display: flex;
     position: relative;
-    font-size: 1.1vw;
+    font-size: 16px;
     font-weight: 400;
 }
 .routine-title {
@@ -325,14 +325,14 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.2vw;
+    font-size: 16px;
     font-weight: 500;
 }
 .detail-routine-btn {
     background-image: url("/public/assets/image/vector-arrow.png");
     background-size: cover;
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 36px;
+    height: 36px;
     border: none;
     cursor: pointer;
     position: absolute;
