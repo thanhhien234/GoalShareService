@@ -65,6 +65,9 @@ body {
     border: none;
     color: #fff;
     outline: none;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .group-search-container button {
     padding: 19px 16px 19px 16px;
@@ -73,6 +76,9 @@ body {
     border-radius: 100px;
     cursor: pointer;
     margin-left: 5px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #groupSearchBtn {
     background-color: transparent;
@@ -117,6 +123,9 @@ body {
     font-size: 12px;
     font-weight: 400;
     margin-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .routine-result-container {
     display: flex;
@@ -126,9 +135,17 @@ body {
     gap: 2vh;
     padding: 0;
 }
+.routine-result-container li {
+    min-width: 0;
+    max-width: 200px;
+}
 .routine-result-container p {
     font-size: 12px;
     color: #797979;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .routine-result-container .grapes-num{
     font-size: 24px;
@@ -149,7 +166,7 @@ body {
     margin-top: 30px;
 }
 .today-routine {
-    flex: 1
+    width: 50%;
 }
 .today-routine h4{
     font-size: 16px;
@@ -165,7 +182,7 @@ body {
 .today-routine-container {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap : 5px;
     padding: 0;
     max-height: 300px;
@@ -185,6 +202,7 @@ body {
     align-items: center;
     padding: 0 10px;
 }
+
 .today-routine-wrapper img {
     width: 20px;
     height: 20px;
@@ -193,6 +211,9 @@ body {
     color: #797979;
     margin-left: 5px;
     font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .detail-btn-container{
     background-color: #191919;
@@ -217,7 +238,7 @@ body {
 }
 /*calendar-routine */
 .calendar-routine {
-    flex: 1;
+    width: 50%;
     margin-left: 5vh;
     margin-bottom: 30px;
     max-height: 350px;
@@ -290,8 +311,15 @@ body {
 .ranking-title {
     display: flex;
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
+}
+.routine-title {
+    margin-top: 1.4vw;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .ranking {
     position: absolute;
@@ -324,9 +352,7 @@ body {
 }
 
 .progress-bar-inner {
-    width: 60%;
     height: 100%;
-    background-color: #C77DFF;
 }
 .routine-participants {
     display: flex;
@@ -339,13 +365,18 @@ body {
     margin-right: 3px;
 }
 .participants-num {
-    color: #C77DFF;
     font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .participants-text {
     color: #797979;
     font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
@@ -529,6 +560,10 @@ body {
         font-size: 32px;
         margin-left: 3vh;
     }
+    .icon1, .icon2, .icon3 {
+        width: 35px;
+        height: 35px;
+    }
     .main-content {
         display: flex;
         flex-direction: column;
@@ -543,6 +578,12 @@ body {
         margin-bottom: 8vh;
     }
     .routine-result-container {
+        width: 100%;
+    }
+    .today-routine {
+        width: 100%;
+    }
+    .calendar-routine{
         width: 100%;
     }
     .today-routine-container {
@@ -570,6 +611,19 @@ body {
     }
     .routine-ranking {
         width: 100%;
+    }
+    .ranking-title{
+        font-size: 16px;
+    }
+    .routine-title {
+        margin-top: 20px;
+    }
+    .ranking{
+        font-size: 16px;
+    }
+    .detail-routine-btn{
+        width: 36px;
+        height: 36px;
     }
     .detail-btn-container {
         display: none;
@@ -605,6 +659,9 @@ body {
         flex: 1;
         color: #797979;
         text-align: center;
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis;
     }
     .routine-ranking {
         margin-bottom: 8vh;
