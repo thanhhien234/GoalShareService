@@ -35,3 +35,9 @@ class Routine extends Subject {
     this.notifyAll();
   }
 }
+
+const routine = new Routine();
+const routineRank = new RoutineRank(routine);
+
+routine.subscribe(routineRank);
+routine.update();
