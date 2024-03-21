@@ -40,8 +40,7 @@ class myRoutine extends Observer {
         <div class="my-routine">
           <div class="my-routine-info-container">
             <div class="my-routine-rate-container">
-              <p class="my-routine-rate-number">${_routine.number}</p>
-              <p class="my-routine-rate-persent">%</p>
+              <p class="my-routine-rate-number">${_routine.number}<span class="my-routine-rate-persent">%</span></p>
             </div>
             <p class="my-routine-name">${_routine.name}</p>
           </div>
