@@ -34,14 +34,18 @@ class myRoutine extends Observer {
       // make routine component
       const myRoutineDiv = document.createElement("div");
 
+      myRoutineDiv.classList.add("my-routine-wrapper");
+
       myRoutineDiv.innerHTML = `
+        <div class="my-routine">
           <div class="my-routine-info-container">
-              <div class="my-routine-rate-container">
-                  <p class="my-routine-rate-number">${_routine.number}<span class="my-routine-rate-persent">%</span></p>
-                  <p class="my-routine-rate-persent">%</p>
-              </div>
-              <p class="my-routine-name">${_routine.name}</p>
+            <div class="my-routine-rate-container">
+              <p class="my-routine-rate-number">${_routine.number}</p>
+              <p class="my-routine-rate-persent">%</p>
+            </div>
+            <p class="my-routine-name">${_routine.name}</p>
           </div>
+        </div>
       `;
 
       // set routine color
