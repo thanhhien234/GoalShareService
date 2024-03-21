@@ -383,7 +383,8 @@ body {
 /* my-all-routine-container */
 .my-all-routine-container {
     background: var(--color-grey2);
-    width: 25%;
+    width: 22%;
+    min-width: 375px;
     height: fit-content;
     padding: 30px 20px;
     padding-bottom: 0;
@@ -403,7 +404,6 @@ body {
 
 .my-all-routine-text-wrapper h2 {
     font-size: 18px;
-    /* font-size: 0.9375vw; */
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.025em;
@@ -451,29 +451,29 @@ body {
 }
 
 .my-routine-rate-number {
-    font-size: 0.833vw;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.04vw;
-    letter-spacing: -0.025em;
+    line-height: 20px;
+    letter-spacing: -0.025rem;
     color: #7B2CBF;
     margin: 0;
-    margin-right: 3px;
 }
 
 .my-routine-rate-persent {
-    font-size: 0.625vw;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 1.04vw;
-    letter-spacing: -0.025em;
+    line-height: 20px;
+    letter-spacing: -0.025rem;
     color: #7B2CBF;
     margin: 0;
+    margin-left: 3px;
 }
 
 .my-routine-name {
-    font-size: 0.833vw;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 1.04vw;
-    letter-spacing: -0.025em;
+    line-height: 20px;
+    letter-spacing: -0.025rem;
     text-align: center;
     width: 5vw;
     overflow: hidden;
@@ -495,7 +495,6 @@ body {
     width: 24%;
     aspect-ratio: 1/1;
     border-bottom-right-radius: var(--border-radius-box);
-    /* transform: translateY(-64%); */
 
     position: relative;
     right: -20px;
@@ -519,7 +518,7 @@ body {
 }
 
 .arrow {
-    width: 2.083vw;
+    width: 40px;
 }
 
 /* mobile screen */
@@ -667,9 +666,11 @@ body {
         margin-bottom: 8vh;
     }
 
+    /* my routine */
     .my-all-routine-container {
         width: 100%;
-        padding: 30px 20px;
+        min-width: auto;
+        padding: 30px 20px 0 20px;
         border-radius: 22px;
     }
     .my-all-routine-text-wrapper {
@@ -691,20 +692,12 @@ body {
     .my-routine-rate-container {
         top: 52%;
     }
-    .my-routine-rate-number {
-        font-size: 2.564vw;
-        line-height: 4.1vw;
-    
+    .my-routine-rate-persent {
+        font-size: 16px;
+
         margin: 0;
     }
-    .my-routine-rate-persent {
-        font-size: 2.564vw;
-        line-height: 4.1vw;
-    }
     .my-routine-name {
-        font-size: 3.07vw;
-        line-height: 4.1vw;
-    
         width: 17.948vw;
     
         margin: 0;
@@ -725,17 +718,32 @@ body {
     .my-all-routine-a:before {
         content: "더보기";
         
-        font-size: 3.589vw;
+        font-size: 14px;
         font-weight: 300;
-        line-height: 4.615vw;
-        letter-spacing: -0.025em;
+        line-height: 18px;
+        letter-spacing: -0.025rem;
         color: #fff;
     
         white-space: nowrap;
     
         transform: translateX(20%);
     }
-    .arrow {
-        width: 10.256vw;
+}
+
+@media screen and (max-width: 425px) {
+    .my-all-routine-wrapper {
+        margin-top: 30px;
+    }
+    .my-routine-rate-number {
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .my-routine-rate-persent {
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .my-routine-name {
+        font-size: 12px;
+        line-height: 16px;
     }
 }

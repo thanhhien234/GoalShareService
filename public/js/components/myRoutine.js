@@ -37,7 +37,7 @@ class myRoutine extends Observer {
       myRoutineDiv.innerHTML = `
           <div class="my-routine-info-container">
               <div class="my-routine-rate-container">
-                  <p class="my-routine-rate-number">${_routine.number}</p>
+                  <p class="my-routine-rate-number">${_routine.number}<span class="my-routine-rate-persent">%</span></p>
                   <p class="my-routine-rate-persent">%</p>
               </div>
               <p class="my-routine-name">${_routine.name}</p>
