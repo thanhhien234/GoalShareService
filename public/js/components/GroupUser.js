@@ -24,20 +24,21 @@ class GroupUser extends Observer {
       // make groupUser component
       const groupMemberDiv = document.createElement("div");
 
+      groupMemberDiv.classList.add("group-member-wrapper");
+
       groupMemberDiv.innerHTML = `
-                <div class="group-member-wrapper">
-                    <div class="group-member">
-                        <img class="group-member-image" src="${_groupUser.profilePic}" alt="">
-                        <div class="group-member-hover">
-                            <div class="group-member-layer"></div>
-                            <div class="group-member-info">
-                                <p class="group-member-nickname">${_groupUser.nickname}</p>
-                                <p class="group-member-persent">${_groupUser.persent}%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
+        <div class="group-member">
+          <img class="group-member-image" src="${_groupUser.profilePic}" alt="">
+          <div class="group-member-hover">
+            <div class="group-member-layer"></div>
+              <div class="group-member-info">
+                <p class="group-member-nickname">${_groupUser.nickname}</p>
+                <p class="group-member-persent">${_groupUser.persent}%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
 
       // set groupUser color
       const groupUserColor = this.colorSet[Math.floor(Math.random() * this.colorSet.length)];
