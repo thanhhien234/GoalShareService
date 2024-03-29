@@ -64,7 +64,45 @@ class ThisWeekRoutine extends Observer {
           grapesCount: grapesCount
       };
     }  
-  
+    async cancelRoutine(routineId) {
+      await $.ajax({
+          url: config.serverUrl + `api/routine/check?routineId=${routineId}`,
+          method: "DELETE",
+          headers: {
+            authorization: "Bearer "+ getCookie("accessToken"),
+          },
+          success: (res) => {
+            routineSubject.update();
+          },
+          error: (error) => {
+            console.log("Error :", error);
+          }
+        });
+  }
+    async checkRoutine(routineId) {
+      await $.ajax({
+          url: config.serverUrl + `api/routine/check?routineId=${routineId}`,
+          method: "POST",
+          headers: {
+            authorization: "Bearer "+ getCookie("accessToken"),
+          },
+          success: (res) => {
+            routineSubject.update();
+          },
+          error: (error) => {
+            console.log("Error :", error);
+          }
+        });
+    }
+    toggleCheckRoutine(checkIcon) {
+      const routineId = parseInt($(checkIcon).data("routineid"));
+      const checked = $(checkIcon).data("checked")
+      if (checked) {
+          this.cancelRoutine(routineId);
+      } else {
+          this.checkRoutine(routineId);
+      }
+    }
     render() {
       //render today-routine-container
       const todayRoutineContainer = document.querySelector(".today-routine-container");
@@ -87,7 +125,7 @@ class ThisWeekRoutine extends Observer {
       });
       todayRoutineContainer.querySelectorAll(".checkIcon").forEach(checkIcon => {
         checkIcon.addEventListener("click", () => {
-            toggleCheckRoutine(checkIcon);
+            this.toggleCheckRoutine(checkIcon);
         });
       });
 

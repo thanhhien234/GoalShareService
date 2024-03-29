@@ -40,15 +40,3 @@ moveGroupSearchContainer();
 window.addEventListener('resize', function() {
     moveGroupSearchContainer();
 });
-
-
-//오늘 루틴 체크
-function toggleCheckRoutine(checkIcon) {
-    const routineId = parseInt($(checkIcon).data("routineid"));
-    const checked = $(checkIcon).data("checked")
-    if (checked) {
-        cancelRoutine(routineId);
-    } else {
-        checkRoutine(routineId);
-    }
-}
