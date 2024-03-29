@@ -95,8 +95,8 @@ class ThisWeekRoutine extends Observer {
         });
     }
     toggleCheckRoutine(checkIcon) {
-      const routineId = parseInt($(checkIcon).data("routineid"));
-      const checked = $(checkIcon).data("checked")
+      const routineId = checkIcon.dataset.routineid;
+      const checked = checkIcon.dataset.checked === 'true';
       if (checked) {
           this.cancelRoutine(routineId);
       } else {
