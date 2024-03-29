@@ -48,11 +48,3 @@ class Routine extends Subject {
     this.notifyAll();
   }
 }
-
-const routine = new Routine();
-const routineRank = new RoutineRank(routine);
-const thisWeekRoutine = new ThisWeekRoutine(routine)
-
-routine.subscribe(routineRank);
-routine.subscribe(thisWeekRoutine);
-routine.update();

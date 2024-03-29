@@ -8,6 +8,7 @@ class ThisWeekRoutine extends Observer {
     }
 
     setTodayRoutine(myRoutine) {
+      this.todayRoutine = [];
       const today = new Date().getDay();
       myRoutine.forEach(routine => {
         if (routine.weekBit && routine.weekBit[today] === '1') {
@@ -16,6 +17,7 @@ class ThisWeekRoutine extends Observer {
       });
     }
     setThisWeekRoutine(myWeekRoutine) {
+      this.thisWeekRoutine = [];
       const today = new Date().getDay();
       for (let i = 0; i < 7; i++) {
         this.thisWeekRoutine.push([]);
@@ -35,6 +37,7 @@ class ThisWeekRoutine extends Observer {
       })
     }
     setRoutineResult(thisWeekRoutine) {
+      this.routineResult = {};
       let totalRoutine = 0;
       let completedRoutine = 0;
       let uncompletedRoutine = 0;
@@ -75,11 +78,17 @@ class ThisWeekRoutine extends Observer {
   
               todayRoutineContainer.innerHTML += `
                   <li class="today-routine-wrapper">
-                      <img src="${checkIconSrc}">
+                      <img class="checkIcon" src="${checkIconSrc}" data-routineid="${routine.routineId}" data-checked="${routine.checked}">
                       <p style="color: ${textColor};">${routine.title}</p>
                   </li>
               `;
-          }
+
+          };
+      });
+      todayRoutineContainer.querySelectorAll(".checkIcon").forEach(checkIcon => {
+        checkIcon.addEventListener("click", () => {
+            toggleCheckRoutine(checkIcon);
+        });
       });
 
       //render calendar-routine-container

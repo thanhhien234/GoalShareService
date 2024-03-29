@@ -6,6 +6,15 @@ const groupSearchContainer = document.querySelector('.group-search-container');
 const myWeekRoutine = document.querySelector('.my-week-routine');
 const mainContent = document.querySelector('.main-content');
 
+//Initialize 
+const routineSubject = new Routine();
+const routineRankObserver = new RoutineRank(routineSubject);
+const thisWeekRoutineObserver = new ThisWeekRoutine(routineSubject)
+
+routineSubject.subscribe(routineRankObserver);
+routineSubject.subscribe(thisWeekRoutineObserver);
+routineSubject.update();
+
 
 // 더보기 버튼
 detailBtn.addEventListener('click', function() {
@@ -33,3 +42,13 @@ window.addEventListener('resize', function() {
 });
 
 
+//오늘 루틴 체크
+function toggleCheckRoutine(checkIcon) {
+    const routineId = parseInt($(checkIcon).data("routineid"));
+    const checked = $(checkIcon).data("checked")
+    if (checked) {
+        cancelRoutine(routineId);
+    } else {
+        checkRoutine(routineId);
+    }
+}
