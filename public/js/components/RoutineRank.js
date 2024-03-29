@@ -37,11 +37,11 @@ class RoutineRank extends Observer {
                     <span class="data">${routine.memberCount}</span>
                 </div>
                 <div class="routine-participants">
-                    <img src="/public/assets/image/face-icon.png">
+                    <img class="face-icon" src="/public/assets/icon/face-icon(${this.colors[index].replace('#', '')}).png">
                     <span class="participants-num" style="color: ${this.colors[index]};">${routine.memberCount}명</span><span class="participants-text">이 참여 중이에요!</span>
                 </div>
             `;
-    
+            
             popularRoutineContainer.appendChild(routineElement);
     });
   }

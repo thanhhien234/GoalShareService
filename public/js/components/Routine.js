@@ -4,6 +4,7 @@ class Routine extends Subject {
 
     this.myRoutine = [];
     this.popularRoutine = [];
+    this.myWeekRoutine=[];
   }
 
   async update() {
@@ -32,6 +33,26 @@ class Routine extends Subject {
       }
     });
 
+    await $.ajax({
+      url: config.serverUrl + "api/routine/week",
+      method: "GET",
+      headers: {
+        authorization: "Bearer "+ getCookie("accessToken"),
+      },
+      success: (res) => {
+        this.myWeekRoutine = res.data;
+      },
+      error: (err)
+    });
+
     this.notifyAll();
   }
 }
+
+const routine = new Routine();
+const routineRank = new RoutineRank(routine);
+const thisWeekRoutine = new ThisWeekRoutine(routine)
+
+routine.subscribe(routineRank);
+routine.subscribe(thisWeekRoutine);
+routine.update();
